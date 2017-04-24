@@ -17,6 +17,9 @@ at anytime.
 ### Changed
   * Added optional `address` and `include_unconfirmed` params to `jsonrpc_wallet_balance` method
   * Wait for subscriptions before announcing wallet has finished starting
+  * Cache claims in wallet storage for use looking claims up by id or outpoint
+  * Try to use cached claim info for `file_list`
+  * Convert wallet storage to inlinecallbacks
   
 ### Fixed
   * fix stream_cost_estimate throwing exception on non decodeable claims
