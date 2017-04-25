@@ -36,6 +36,8 @@ test_script:
 
 build_script:
 - cd C:\projects\lbry\build\
+- nuget install secure-file -ExcludeVersion
+- secure-file\tools\secure-file -decrypt .\lbry2.pfx.enc -secret %pfx_key%
 - ps: .\build.ps1
 
 
